@@ -23,6 +23,8 @@
     <!-- End Cards -->  
 
     <script>
+        setInterval('traer()',2000);
+
         var contenido = document.querySelector('#card-devices')
         function traer() {
 
@@ -45,13 +47,13 @@
 
                 for (i = 0; i < data.device.length; i++) { 
                     if (data.device[i].status == 1 ) {
-                        var statusobtenido = `<button type="button" class="btn btn-success" onclick="put('${data.device[i]._id}', '/0')">ON</button>`
+                        var statusobtenido = `<button type="button" class="btn btn-success btn-lg" onclick="put('${data.device[i]._id}', '/0')">ON</button>`
                         var bordercard = "border-success"
                     }
 
                     else {
-                        var statusobtenido = `<button type="button" class="btn btn-dark" onclick="put('${data.device[i]._id}', '/1')">OFF</button>`;
-                        var bordercard = "border-secondary"
+                        var statusobtenido = `<button type="button" class="btn btn-dark btn-lg" onclick="put('${data.device[i]._id}', '/1')">OFF</button>`;
+                        var bordercard = ""
                     }
 
                     contenido.innerHTML += `
