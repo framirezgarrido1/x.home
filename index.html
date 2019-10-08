@@ -47,8 +47,8 @@
 
                 for (i = 0; i < data.device.length; i++) { 
                     if (data.device[i].status == 1 ) {
-                        var statusobtenido = `<button type="button" class="btn btn-success btn-lg" onclick="put('${data.device[i]._id}', '/0')">ON</button>`
-                        var bordercard = "border-success"
+                        var statusobtenido = `<button type="button" class="btn btn-light btn-lg" onclick="put('${data.device[i]._id}', '/0')">ON</button>`
+                        var bordercard = "border-success text-white bg-success"
                     }
 
                     else {
