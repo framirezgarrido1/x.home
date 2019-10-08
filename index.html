@@ -47,12 +47,12 @@
 
                 for (i = 0; i < data.device.length; i++) { 
                     if (data.device[i].status == 1 ) {
-                        var statusobtenido = `<button type="button" class="btn btn-outline-light btn-lg" onclick="put('${data.device[i]._id}', '/0')">OFF</button>`
+                        var statusobtenido = `<button type="button" class="btn-outline-light btn-lg" onclick="put('${data.device[i]._id}', '/0')">OFF</button>`
                         var bordercard = "border-success text-white bg-success"
                     }
 
                     else {
-                        var statusobtenido = `<button type="button" class="btn btn-outline-success btn-lg" onclick="put('${data.device[i]._id}', '/1')">ON</button>`;
+                        var statusobtenido = `<button type="button" class="btn-outline-success btn-lg" onclick="put('${data.device[i]._id}', '/1')">ON</button>`;
                         var bordercard = ""
                     }
 
@@ -62,7 +62,7 @@
                                       <h5 class="card-title">${data.device[i].device} > ${data.device[i].name}</h5>
                                      <p class="card-text">${data.device[i]._id}</p>
                                   <p>${statusobtenido}</p>
-        </div>
+                                </div>
                             </div>
                     `
                 }
