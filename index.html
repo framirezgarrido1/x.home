@@ -25,6 +25,8 @@
     <script>
         var contenido = document.querySelector('#card-devices')
         function traer() {
+
+
             fetch('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/devices', {
                 method: 'GET', // or 'PUT'
                 //body: JSON.stringify(data), // data can be `string` or {object}!
@@ -38,6 +40,8 @@
                 console.log(data.device)
 
                 var i;
+
+                contenido.innerHTML = '';
 
                 for (i = 0; i < data.device.length; i++) { 
                     if (data.device[i].status == 1 ) {
@@ -78,7 +82,8 @@
 
             .then((response) => {
                 if (response.ok) {
-                    return location.reload();
+                    //return location.reload();
+                    traer();
                 }
 
             })
