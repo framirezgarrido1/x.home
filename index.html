@@ -47,13 +47,13 @@
 
                 for (i = 0; i < data.device.length; i++) { 
                     if (data.device[i].status == 1 ) {
-                        var statusobtenido = `<button type="button" class="btn-outline-light btn-lg" onclick="put('${data.device[i]._id}', '/0')">OFF</button>`
-                        var bordercard = "border-success text-white bg-success"
+                        var statusobtenido = `<button type="button" class="btn btn-success btn-lg" onclick="put('${data.device[i]._id}', '/0')">ON</button>`
+                        var bordercard = "border-success"
                     }
 
                     else {
-                        var statusobtenido = `<button type="button" class="btn-outline-success btn-lg" onclick="put('${data.device[i]._id}', '/1')">ON</button>`;
-                        var bordercard = ""
+                        var statusobtenido = `<button type="button" class="btn btn-light btn-lg" onclick="put('${data.device[i]._id}', '/1')">OFF</button>`;
+                        var bordercard = "border-secondary text-white bg-success"
                     }
 
                     contenido.innerHTML += `
