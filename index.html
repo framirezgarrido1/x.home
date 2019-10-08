@@ -46,14 +46,16 @@
                 for (i = 0; i < data.device.length; i++) { 
                     if (data.device[i].status == 1 ) {
                         var statusobtenido = `<button type="button" class="btn btn-success" onclick="put('${data.device[i]._id}', '/0')">ON</button>`
+                        var bordercard = "border-success"
                     }
 
                     else {
                         var statusobtenido = `<button type="button" class="btn btn-dark" onclick="put('${data.device[i]._id}', '/1')">OFF</button>`;
+                        var bordercard = "border-secondary"
                     }
 
                     contenido.innerHTML += `
-                            <div class="card">
+                            <div class="card ${bordercard}">
                                 <div class="card-body">
                                       <h5 class="card-title">${data.device[i].device} > ${data.device[i].name}</h5>
                                      <p class="card-text">${data.device[i]._id}</p>
